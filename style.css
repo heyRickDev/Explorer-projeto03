@@ -1,6 +1,9 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   background: #d9d9d9;
   font-family: "Poppins", sans-serif;
 }
@@ -13,6 +16,13 @@ body::before {
   left: 0;
   z-index: -1;
   background: #121214;
+}
+body,
+label,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
 }
 .page {
   width: 736px;
@@ -42,4 +52,38 @@ form {
   margin: 48px auto 0;
   border-radius: 8px;
   background: #fafafc;
+  padding: 64px;
+}
+fieldset {
+  border: none;
+}
+fieldset legend {
+  font-family: "Archivo", sans-serif;
+  color: #32264d;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  border-bottom: 1px solid #e6e6f0;
+  width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+fieldset input {
+  width: 100%;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+  background: #fafafc;
+  height: 56px;
+  padding-left: 24px;
+}
+.input-wrapper label {
+  color: #4e4958;
+  font-size: 14px;
+  line-height: 24px;
+}
+.input-wrapper label span {
+  padding-left: 12px;
+  color: #c1bccc;
+  font-size: 12px;
+  line-height: 20px;
 }
