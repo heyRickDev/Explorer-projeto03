@@ -47,15 +47,22 @@ header p {
   margin: 24px auto 0;
 }
 form {
-  width: 736px;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   margin: 48px auto 0;
   border-radius: 8px;
   background: #fafafc;
   padding: 64px;
+  min-height: 300px;
 }
 fieldset {
   border: none;
+}
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 fieldset legend {
   font-family: "Archivo", sans-serif;
@@ -66,9 +73,29 @@ fieldset legend {
   border-bottom: 1px solid #e6e6f0;
   width: 100%;
   padding-bottom: 16px;
-  margin-bottom: 24px;
 }
-fieldset input {
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.input-wrapper label {
+  color: #4e4958;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.input-wrapper label span {
+  margin-left: 12px;
+  color: #c1bccc;
+  font-size: 12px;
+  line-height: 20px;
+}
+.input-wrapper label span:hover {
+  color: #74717d;
+}
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
   width: 100%;
   border: 1px solid #e6e6f0;
   border-radius: 8px;
@@ -76,14 +103,21 @@ fieldset input {
   height: 56px;
   padding-left: 24px;
 }
-.input-wrapper label {
-  color: #4e4958;
-  font-size: 14px;
-  line-height: 24px;
+.input-wrapper textarea {
+  height: 168px;
+  padding: 24px;
 }
-.input-wrapper label span {
-  padding-left: 12px;
-  color: #c1bccc;
-  font-size: 12px;
-  line-height: 20px;
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+.col-3 > div:nth-child(1) {
+  width: 100%;
 }
